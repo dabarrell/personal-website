@@ -1,7 +1,9 @@
 {
-  "name": "bootstrap-starter",
+  "name": "personal-website",
+  "title": "Personal Website",
+  "homepage": "https://davidbarrell.me",
   "version": "0.0.1",
-  "description": "Starting skeleton for Bootstrap, Gulp, Sass",
+  "description": "David Barrell's personal website",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,17 +18,19 @@
     "gulp-autoprefixer": "^3.1.1",
     "gulp-cache": "^0.4.5",
     "gulp-clean-css": "^2.0.10",
+    "gulp-concat": "^2.6.1",
     "gulp-header": "^1.8.7",
     "gulp-imagemin": "^3.1.1",
     "gulp-rename": "^1.2.2",
     "gulp-rimraf": "^0.2.1",
     "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^1.9.1",
     "gulp-uglify": "^1.5.4",
     "jquery": "^1.11.3",
     "run-sequence": "^1.2.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dabarrell/bootstrap-starter.git"
+    "url": "https://github.com/dabarrell/personal-website.git"
   }
 }
