@@ -9,5 +9,5 @@ before_script:
 script: gulp
 after_success:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - docker build -t davidbarrell/personal-website .
+  - docker build -t davidbarrell/personal-website:$TRAVIS_BRANCH .
   - docker push davidbarrell/personal-website:$TRAVIS_BRANCH
