@@ -1,6 +1,13 @@
+sudo: required
+services:
+  - docker
 language: node_js
 node_js:
   - "6"
 before_script:
   - npm install
 script: gulp
+after_success:
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker build -t davidbarrell/personal-website .
+  - docker push davidbarrell/personal-website:$TRAVIS_BRANCH
