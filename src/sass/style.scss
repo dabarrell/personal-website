@@ -110,7 +110,6 @@ a img {
   padding-bottom: 150px;
   background-color: $resume-bg;
   color: $resume-text;
-  white-space: nowrap;
 
   .resume-section {
     padding-top: 150px;
@@ -127,6 +126,7 @@ a img {
       @include line-height(27);
       @include font-size(14);
       color: $resume-info-text;
+      white-space: nowrap;
 
       div {
         padding: 0px;
@@ -134,6 +134,7 @@ a img {
 
       .info {
         padding-top: 15px;
+        white-space: normal;
       }
 
       .logo {

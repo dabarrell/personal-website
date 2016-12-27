@@ -89,10 +89,6 @@ gulp.task('copy', function() {
     gulp.src(['node_modules/jquery/dist/**/*'])
         .pipe(gulp.dest('build/vendor/jquery'))
 
-    gulp.src(['node_modules/handlebars/dist/handlebars.js',
-            'node_modules/handlebars/dist/handlebars.min.js'])
-        .pipe(gulp.dest('build/vendor/handlebars'))
-
     gulp.src([
             'node_modules/font-awesome/**',
             '!node_modules/font-awesome/.npmignore',

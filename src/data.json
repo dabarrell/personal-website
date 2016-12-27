@@ -8,8 +8,7 @@
               "title": "Master of Engineering (Software)",
               "subtitle": "University of Melbourne",
               "dates": "2016 - Present",
-              "location": "Melbourne, AUS",
-              "info": "Hello"
+              "location": "Melbourne, AUS"
           },
           {
               "logoUrl": "img/uom-logo.jpg",
@@ -25,7 +24,7 @@
               "subtitle": "University of Melbourne",
               "dates": "2012 - 2015",
               "location": "Melbourne, AUS",
-              "info": "Hello"
+              "info": "Majoring in Bassoon, with experience on Piano, Alto Saxophone, Clarinet and Guitar."
           }
       ]
     },
