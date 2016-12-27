@@ -12,7 +12,7 @@ if [ -z "$TRAVIS_PULL_REQUEST" ] || [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     sudo apt-get install jq
 
     echo "Deploying $TRAVIS_BRANCH on $CLUSTER"
-    ./bin/ecs-deploy -c $CLUSTER -n $SERVICE -i docker.io/davidbarrell/personal-website:$TRAVIS_BRANCH
+    ./bin/ecs-deploy --remove-prev -c $CLUSTER -n $SERVICE -i docker.io/davidbarrell/personal-website:$TRAVIS_BRANCH
   else
     echo "Skipping deploy because it's not an allowed branch"
   fi

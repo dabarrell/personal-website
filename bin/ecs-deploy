@@ -34,6 +34,7 @@ function usage() {
         -e | --tag-env-var      Get image tag name from environment variable. If provided this will override value specified in image name argument.
         --max-definitions       Number of Task Definition Revisions to persist before deregistering oldest revisions.
         -v | --verbose          Verbose output
+        --remove-prev           EDITED: Removes previous task. Use with caution when port binding issues may occur.
 
     Requirements:
         aws:  AWS Command Line Interface
@@ -89,6 +90,7 @@ MAX=false
 TIMEOUT=90
 VERBOSE=false
 TAGVAR=false
+REMOVE_PREV=false
 AWS_CLI=$(which aws)
 AWS_ECS="$AWS_CLI --output json ecs"
 
@@ -157,6 +159,9 @@ do
         --max-definitions)
             MAX_DEFINITIONS="$2"
             shift
+            ;;
+        --remove-prev)
+            REMOVE_PREV=true
             ;;
         -v|--verbose)
             VERBOSE=true
@@ -347,11 +352,26 @@ else
     DESIRED_COUNT="--desired-count $DESIRED"
   fi
 
+  ###### EDITED
+  OLD_TASK_ARN=`$AWS_ECS list-tasks --cluster "$CLUSTER" | jq -r '.taskArns[0]'`;
+
   # Update the service
   UPDATE=`$AWS_ECS update-service --cluster $CLUSTER --service $SERVICE $DESIRED_COUNT --task-definition $NEW_TASKDEF $DEPLOYMENT_CONFIG`
 
   # Only excepts RUNNING state from services whose desired-count > 0
   SERVICE_DESIREDCOUNT=`$AWS_ECS describe-services --cluster $CLUSTER --service $SERVICE | jq '.services[]|.desiredCount'`
+
+  ### EDITED SECTION BEGINS
+  # Check of desired count is 1 - hint that there may be port issues preventing new task from taking over
+  if [ $REMOVE_PREV == true ]; then
+    echo "Stopping previous task: $OLD_TASK_ARN";
+
+    # Stop old task
+    STOP_OLD_TASK=`$AWS_ECS stop-task --cluster $CLUSTER --task $OLD_TASK_ARN`;
+    echo "Previous task stopped.";
+  fi
+  ### EDITED SECTION ENDS
+
   if [ $SERVICE_DESIREDCOUNT -gt 0 ]; then
     # See if the service is able to come up again
     every=10
