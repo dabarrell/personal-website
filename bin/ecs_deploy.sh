@@ -4,6 +4,10 @@
 if [ -z "$TRAVIS_PULL_REQUEST" ] || [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   # Deploy only if we're testing the master branch
   if [ "$TRAVIS_BRANCH" == "staging" ]; then
+    echo "Installing AWS CLI"
+    pip install --user awscli
+    export PATH=$PATH:$HOME/.local/bin
+
     echo "Installing JQ"
     sudo apt-get install jq
 

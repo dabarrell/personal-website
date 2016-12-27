@@ -10,6 +10,3 @@ script: gulp
 after_success:
   - bin/docker_push.sh
   - bin/ecs_deploy.sh
-  # - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  # - docker build -t davidbarrell/personal-website:$TRAVIS_BRANCH .
-  # - docker push davidbarrell/personal-website:$TRAVIS_BRANCH
