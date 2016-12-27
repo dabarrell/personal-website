@@ -1,0 +1,62 @@
+{
+  "resumeSection" : [
+    {
+      "title" : "education",
+      "item" : [
+          {
+              "logoUrl": "img/uom-logo.jpg",
+              "title": "Master of Engineering (Software)",
+              "subtitle": "University of Melbourne",
+              "dates": "2016 - Present",
+              "location": "Melbourne, AUS",
+              "info": "Hello"
+          },
+          {
+              "logoUrl": "img/uom-logo.jpg",
+              "title": "Bachelor of Science (Electrical Systems)",
+              "subtitle": "University of Melbourne",
+              "dates": "2012 - 2015",
+              "location": "Melbourne, AUS",
+              "info": "Hello"
+          },
+          {
+              "logoUrl": "img/uom-logo.jpg",
+              "title": "Diploma in Music (Practical)",
+              "subtitle": "University of Melbourne",
+              "dates": "2012 - 2015",
+              "location": "Melbourne, AUS",
+              "info": "Hello"
+          }
+      ]
+    },
+    {
+      "title" : "work experience",
+      "item" : [
+          {
+              "logoUrl": "img/uom-logo.jpg",
+              "title": "Master of Engineering (Software)",
+              "subtitle": "University of Melbourne",
+              "dates": "2016 - Present",
+              "location": "Melbourne, AUS",
+              "info": "Hello"
+          },
+          {
+              "logoUrl": "img/uom-logo.jpg",
+              "title": "Bachelor of Science (Electrical Systems)",
+              "subtitle": "University of Melbourne",
+              "dates": "2012 - 2015",
+              "location": "Melbourne, AUS",
+              "info": "Hello"
+          },
+          {
+              "logoUrl": "img/uom-logo.jpg",
+              "title": "Diploma in Music (Practical)",
+              "subtitle": "University of Melbourne",
+              "dates": "2012 - 2015",
+              "location": "Melbourne, AUS",
+              "info": "Hello"
+          }
+      ]
+    }
+  ]
+}

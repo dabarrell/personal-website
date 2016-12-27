@@ -107,42 +107,45 @@ a img {
 }
 
 #resume {
-  padding-top: 150px;
   padding-bottom: 150px;
   background-color: $resume-bg;
   color: $resume-text;
   white-space: nowrap;
 
-  .section-title {
-    @include font-size(20);
-    border-bottom: thin solid $resume-text;
-    padding: 0px;
-    padding-bottom: 10px;
-  }
+  .resume-section {
+    padding-top: 150px;
 
-  .section-content {
-    padding-top: 30px;
-    @include line-height(27);
-    @include font-size(14);
-    color: $resume-info-text;
-
-    div {
+    .section-title {
+      @include font-size(20);
+      border-bottom: thin solid $resume-text;
       padding: 0px;
+      padding-bottom: 10px;
     }
 
-    .info {
-      padding-top: 15px;
-    }
+    .section-content {
+      padding-top: 30px;
+      @include line-height(27);
+      @include font-size(14);
+      color: $resume-info-text;
 
-    .logo {
-      height: 67px;
-      margin-right: 20px;
-      @include border-radius(34px);
-    }
+      div {
+        padding: 0px;
+      }
 
-    .degree {
-      @include font-size(16);
-      color: $resume-text;
+      .info {
+        padding-top: 15px;
+      }
+
+      .logo {
+        height: 67px;
+        margin-right: 20px;
+        @include border-radius(34px);
+      }
+
+      .degree {
+        @include font-size(16);
+        color: $resume-text;
+      }
     }
   }
 }

@@ -5,7 +5,7 @@ var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var clean = require('gulp-rimraf');
-var rename = require("gulp-rename");
+var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var autoprefixer = require('gulp-autoprefixer');
 var pkg = require('./package.json');
@@ -13,6 +13,9 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var runSequence = require('run-sequence');
 var sourcemaps = require('gulp-sourcemaps');
+var handlebars = require('gulp-compile-handlebars');
+var fs = require('fs');
+
 
 // Set the banner content
 var banner = ['/*\n',
@@ -106,14 +109,30 @@ gulp.task('html:inner', function() {
         .pipe(gulp.dest('build'))
         .pipe(browserSync.reload({
             stream: true
-        }))
+        }));
 });
 gulp.task('html:clean', function() {
     return gulp.src('build/**/*.html', { read: false })
         .pipe(clean());
 });
 gulp.task('html', function(cb) {
-    runSequence('html:clean', 'html:inner', cb);
+    runSequence('html:clean', 'handlebars', 'html:inner', cb);
+});
+
+gulp.task('handlebars', function() {
+    var options = {
+            ignorePartials: true
+        };
+
+    return gulp.src('src/templates/**/*.hbs')
+        .pipe(handlebars(
+          JSON.parse(fs.readFileSync('./src/data.json')),
+          options))
+        .pipe(rename({ extname: '.html' }))
+        .pipe(gulp.dest('build'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 });
 
 // Copy and optimise images
@@ -146,9 +165,21 @@ gulp.task('browserSync', function() {
 gulp.task('default', ['minify-css', 'minify-js', 'copy', 'html', 'images']);
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'minify-css', 'minify-js', 'copy', 'html', 'images'], function() {
+gulp.task('dev', function(cb) {
+    runSequence(
+        ['minify-css', 'minify-js', 'copy', 'html', 'images'],
+        'browserSync',
+        'watch',
+        cb
+    );
+});
+
+// Set up watches
+gulp.task('watch', function() {
     gulp.watch('src/sass/**/*.scss', ['minify-css']);
     gulp.watch('src/js/**/*.js', ['minify-js']);
     gulp.watch('src/img/**/*', ['images']);
     gulp.watch('src/**/*.html', ['html']);
+    gulp.watch('src/templates/**/*.hbs', ['html']);
+    gulp.watch('src/data.json', ['html']);
 });
