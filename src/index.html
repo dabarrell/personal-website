@@ -47,18 +47,85 @@
     <div id="about" class="container">
       <div class="row text-center">
         <div class="col-xs-12">
-          <img src="img/bike.png">
+          <img src="img/bike.png" width=200px>
         </div>
       </div>
     </div>
 
-    	<!-- About Me -->
-    	<div id="about"><div class="inner"></div></div>
+    <div id="resume" class="container">
+      <div class="row text-left">
+        <div class="col-md-4 col-xs-8 col-md-offset-4 col-xs-offset-2 section-title">
+          <p>
+            education
+          </p>
+        </div>
+      </div>
+
+      <!-- <div class="section-content">
+        <div class="row">
+          <div class="col-md-4 col-xs-2 text-right">
+            <img class="logo" src="img/uom-logo.jpg" alt="University of Melbourne Logo">
+          </div>
+          <div class="col-md-2 col-xs-4 text-left">
+            <p>
+              <span class="degree">Master of Engineering (Software)</span><br />
+              University of Melbourne
+            </p>
+          </div>
+          <div class="col-md-2 col-xs-4 text-right">
+            <p>
+              2016 - Present<br />
+              Melbourne, AUS
+            </p>
+          </div>
+        </div>
+        <div class="row info">
+          <div class="col-md-4 col-xs-8 col-md-offset-4 col-xs-offset-2 text-left">
+            Here is some extra info about my studies in this subject
+          </div>
+        </div>
+
+      </div> -->
+      <div class="resume-item-placeholder"></div>
+    </div>
+
+
 
 
 
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/handlebars/handlebars.min.js"></script>
     <script src="js/main.js" charset="utf-8"></script>
+
+    <script id="resume-item-template" type="text/x-handlebars-template">
+      {{#each item}}
+      <div class="section-content">
+        <div class="row">
+          <div class="col-md-4 col-xs-2 text-right">
+            <img class="logo" src="{{logoUrl}}" alt="University of Melbourne Logo">
+          </div>
+          <div class="col-md-2 col-xs-4 text-left">
+            <p>
+              <span class="degree">{{title}}</span><br />
+              {{subtitle}}
+            </p>
+          </div>
+          <div class="col-md-2 col-xs-4 text-right">
+            <p>
+              {{dates}}<br />
+              {{location}}
+            </p>
+          </div>
+        </div>
+        <div class="row info">
+          <div class="col-md-4 col-xs-8 col-md-offset-4 col-xs-offset-2 text-left">
+            {{info}}
+          </div>
+        </div>
+
+      </div>
+      {{/each}}
+    </script>
   </body>
 </html>

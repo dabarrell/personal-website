@@ -8,9 +8,11 @@ RUN mkdir -p /var/lock/apache2 /var/run/apache2 /var/run/sshd /var/log/superviso
 RUN rm /etc/apache2/sites-enabled/*
 RUN apt-get install -y rsyslog
 
-RUN echo 'root:password' | chpasswd
+RUN echo 'root:$SSH_PWD' | chpasswd
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+RUN mkdir -p /root/ssh/
+RUN echo $SSH_PUBKEY >> /root/ssh/authorized_keys
 
 ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
