@@ -15,6 +15,7 @@ var runSequence = require('run-sequence');
 var sourcemaps = require('gulp-sourcemaps');
 var handlebars = require('gulp-compile-handlebars');
 var fs = require('fs');
+var yaml = require('yaml-js');
 
 
 // Set the banner content
@@ -122,7 +123,7 @@ gulp.task('handlebars', function() {
 
     return gulp.src('src/templates/**/*.hbs')
         .pipe(handlebars(
-          JSON.parse(fs.readFileSync('./src/data.json')),
+          yaml.load(fs.readFileSync('./src/data.yaml')),
           options))
         .pipe(rename({ extname: '.html' }))
         .pipe(gulp.dest('build'))
@@ -178,4 +179,5 @@ gulp.task('watch', function() {
     gulp.watch('src/**/*.html', ['html']);
     gulp.watch('src/templates/**/*.hbs', ['html']);
     gulp.watch('src/data.json', ['html']);
+    gulp.watch('src/data.yaml', ['html']);
 });

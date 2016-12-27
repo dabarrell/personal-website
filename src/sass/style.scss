@@ -123,6 +123,7 @@ a img {
 
     .section-content {
       padding-top: 30px;
+      padding-bottom: 30px;
       @include line-height(27);
       @include font-size(14);
       color: $resume-info-text;
@@ -135,12 +136,17 @@ a img {
       .info {
         padding-top: 15px;
         white-space: normal;
+        @include font-size(12);
       }
 
       .logo {
-        height: 67px;
         margin-right: 20px;
         @include border-radius(34px);
+        max-width: 67px;
+        max-height: 67px;
+        width: auto;
+        height: auto;
+        background: white;
       }
 
       .degree {

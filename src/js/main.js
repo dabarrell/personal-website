@@ -1,25 +1,14 @@
-
-$(function () {
-  var source   = $("#resume-item-template").html();
-  var template = Handlebars.compile(source);
-  var data = { item: [
-      {
-        "logoUrl": "img/uom-logo.jpg",
-        "title": "Master of Engineering (Software)",
-        "subtitle": "University of Melbourne",
-        "dates": "2016 - Present",
-        "location": "Melbourne, AUS",
-        "info": "Hello"
-      },
-      {
-        "logoUrl": "img/uom-logo.jpg",
-        "title": "Bachelor of Science (Electrical Systems)",
-        "subtitle": "University of Melbourne",
-        "dates": "2012 - 2015",
-        "location": "Melbourne, AUS",
-        "info": "Hello"
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
       }
-    ]};
-  $(".resume-item-placeholder").html(template(data));
-  console.log(source);
+    }
+  });
 });
