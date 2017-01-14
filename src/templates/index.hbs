@@ -82,11 +82,28 @@
               </p>
             </div>
           </div>
+          {{#if info}}
           <div class="row info">
             <div class="col-md-4 col-xs-8 col-md-offset-4 col-xs-offset-2 text-left">
-              {{{info}}}
+              {{#if info.text}}
+              <p>
+                {{{info.text}}}
+              </p>
+              {{/if}}
+              {{#if info.tech}}
+              <ul class="tech-list">
+              {{#each info.tech}}
+              <li>
+                {{this}}
+              </li>
+              {{/each}}
+              </ul>
+              {{/if}}
             </div>
           </div>
+          {{/if}}
+
+
 
         </div>
         {{/each}}
