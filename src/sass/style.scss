@@ -137,6 +137,25 @@ a img {
         padding-top: 15px;
         white-space: normal;
         @include font-size(12);
+
+        .tech-list {
+          padding-top: 10px;
+          padding-left: 0px;
+
+          li {
+            @include font-size(9);
+            display: inline;
+            padding: 8px;
+            padding-right: 10px;
+            padding-left: 10px;
+            margin-right: 10px;
+            @include border-radius(20px);
+            border: thin solid $tech-border-colour;
+            text-transform: uppercase;;
+          }
+        }
+
+
       }
 
       .logo {
