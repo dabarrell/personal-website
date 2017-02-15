@@ -1,5 +1,88 @@
 ---
 resumeSection:
+- title: work experience
+  item:
+  - logoUrl: img/teenyco-logo.jpg
+    title: Co-Founder & CTO
+    subtitle: Teenyco
+    dates: Jul 2016 - Present
+    location: Melbourne, AUS
+    info:
+      text: |-
+        Teenyco aims to improve ultrasound diagnostics in pregnancies, as well as
+        foster an increased connection between parent and unborn child. Through
+        various visualisation and digital fabrication techniques, we are able to
+        provide parents with a new way to connect with their babies. These methods
+        include extrapolating meshes from 2D ultrasound images, allowing us to
+        3D print tangible models.<br /><br />
+        Access to the anonymised data obtained through this process also allows
+        us to investigate how machine learning can be used to pick up and point
+        out potential anomalies to radiologists, reducing the high rate of ultrasound
+        anomalies that currently go undetected.<br /><br />
+        Teenyco won the $10,000 CMB Capital 'Best Startup' award at the Wade
+        Institute's Final Pitch Night, as chosen by a panel including venture
+        capitalists and established entrepreneurs.
+      tech: ['3d printing', 'digital fabrication']
+  - logoUrl: img/tbc-logo.jpg
+    title: Software Developer
+    subtitle: The Baby Club
+    dates: Oct 2016 - Present
+    location: Melbourne, AUS
+    info:
+      text: |-
+        Developing The Baby Club's eCommerce website and back-end, with a focus
+        on Stripe API integration, handling single payments, as well as a
+        custom lay-by implementation.
+      tech: ['django', 'aws', 'docker', 'js', 'stripe', 'git', 'python']
+  - logoUrl: img/uom-logo.jpg
+    title: Technical Support Officer
+    subtitle: Health and Biomedical Informatics Centre
+    dates: Jul 2015 - Present
+    location: Melbourne, AUS
+    info:
+      text: |-
+        Work on both the support and development side of the University of
+        Melbourne's GRHANITE team. GRHANITE is custom-designed software focused on
+        the extraction of primary care data in an ethical and privacy-sensitive
+        manner, for the purpose of research.<br/><br/>
+        Provided technical support to over 800 clients. Developed tools in SQL to
+        streamline support process and enable easy monitoring. Developed data
+        extraction tool interface for clinical management systems.
+      tech: ['ms sql', 'git', 'c#', 'jira']
+  - logoUrl: img/tuteme-logo.png
+    title: Co-Founder & CTO
+    subtitle: TuteMe
+    dates: Jan 2016 - Dec 2016
+    location: Melbourne, AUS
+    info:
+      text: |-
+        Developed a tutoring marketplace platform from the ground up. University
+        students and tutors are able to use the Android and iOS apps to request
+        tutorials, and respond to requests. Once connected, the app helps them
+        meet up, and handles reviewing and payments (through the Stripe API) once
+        the tutorial is completed.
+      tech: ['robovm', 'java', 'obj-c', 'sketch', 'nodejs', 'git']
+  - logoUrl: img/oc-logo.jpg
+    title: Software / Web Developer
+    subtitle: Ormond College
+    dates: Jan 2015 - Dec 2015
+    location: Melbourne, AUS
+    info:
+      text: |-
+        Developed internal portal used daily by over 600 staff and students,
+        for administrative tasks and college news. Published iOS and Android
+        apps providing a mobile experience for the portal, built on PhoneGap.
+      tech: ['wordpress', 'php', 'phonegap']
+  - logoUrl: img/oc-logo.jpg
+    title: AV Coordinator
+    subtitle: Ormond College
+    dates: Feb 2013 - Dec 2014
+    location: Melbourne, AUS
+    info:
+      text: |-
+        Liaised with external groups and internal event organisers regarding
+        AV requirements. Handled set up and operation of AV equipment for events
+        held at the College.
 - title: education
   item:
   - logoUrl: img/uom-logo.jpg
@@ -26,71 +109,24 @@ resumeSection:
         <li>Choral Director, Ormond College Choir</li>
         <li>Musical Director, Ormond College Drama Club</li>
         </ul>
-
-- title: work experience
-  item:
-  - logoUrl: img/teenyco-logo.jpg
-    title: Co-Founder & CTO
-    subtitle: Teenyco
-    dates: Jul 2016 - Present
+  - logoUrl: img/oc-logo.jpg
+    title: Ormond College
+    subtitle: Resident
+    dates: 2012 - Present
     location: Melbourne, AUS
     info:
       text: |-
-        Improving the diagnostic and visualisation aspects of ultrasound.
-        Awarded CMB Capital $10k award for Best Startup at the Wade Institute.
-      tech: ['3d printing', 'dicom', 'materialise']
-  - logoUrl: img/tbc-logo.jpg
-    title: Software Developer
-    subtitle: The Baby Club
-    dates: Oct 2016 - Present
-    location: Melbourne, AUS
-    info:
-      text: |-
-        Developing The Baby Club's eCommerce website and back-end.
-      tech: ['django', 'aws', 'docker', 'js', 'stripe', 'git']
-  - logoUrl: img/uom-logo.jpg
-    title: Technical Support Officer
-    subtitle: Health and Biomedical Informatics Centre
-    dates: Jul 2015 - Present
-    location: Melbourne, AUS
-    info:
-      text: |-
-        Work on both the support and development side of the University of
-        Melbourne's GRHANITE team. GRHANITE is custom-designed software focused on
-        the extraction of primary care data in an ethical and privacy-sensitive
-        manner, for the purpose of research.<br/><br/>
-        Provided technical support to over 800 clients. Developed tools in SQL to
-        streamline support process and enable easy monitoring. Developed data
-        extraction tool interface for clinical management systems.
-      tech: ['mssql', 'git', 'c#', 'jira']
-  - logoUrl: img/tuteme-logo.png
-    title: Co-Founder & CTO
-    subtitle: TuteMe
-    dates: Jan 2016 - Dec 2016
-    location: Melbourne, AUS
-    info:
-      text: |-
-        Developed a mobile tutoring platform. iOS and Android apps built on
-        RoboVM (Java + Obj-C), with a backend API built on NodeJS.
-      tech: ['robovm', 'java', 'obj-c', 'sketch', 'nodejs', 'git']
-  - logoUrl: img/oc-logo.png
-    title: Software / Web Developer
-    subtitle: Ormond College
-    dates: Jan 2015 - Dec 2015
-    location: Melbourne, AUS
-    info:
-      text: |-
-        Developed internal portal used daily by over 600 staff and students,
-        for administrative tasks and college news. Published iOS and Android
-        apps providing a mobile experience for the portal, built on PhoneGap.
-      tech: ['wordpress', 'php']
-  - logoUrl: img/oc-logo.png
-    title: AV Coordinator
-    subtitle: Ormond College
-    dates: Feb 2013 - Dec 2014
-    location: Melbourne, AUS
-    info:
-      text: |-
-        Liaised with external groups and internal event organisers regarding
-        AV requirements. Handled set up and operation of AV equipment for events
-        held at the College.
+        Various leadership roles and awards, including
+        <ul>
+        <li>Chair, Ormond College Middle Common Room</li>
+        <li>Producer, Ormond College Ball</li>
+        <li>Head of Music, Head of IT, Head of Lighting and Sound</li>
+        <li>Katie Lush Award for outstanding contribution</li>
+        </ul>
+footerLink:
+- link: LinkedIn
+  url: https://linkedin.com/in/dabarrell
+- link: Github
+  url: https://github.com/dabarrell
+- link: Email
+  url: mailto:david@barrell.me

@@ -17,9 +17,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a {
-  text-decoration: none;
+a, a:hover, a:visited, a:active {
   color: #333;
+  text-decoration: none;
 }
 
 a img {
@@ -44,7 +44,7 @@ a img {
   top: 0;
   left: 0;
   font-family: $font-stack2;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   text-transform: lowercase;
   width: 100%;
   background-color: $header-bg;
@@ -58,11 +58,15 @@ a img {
   padding-bottom: 15px;
 
   .name {
-    width:40%;
+    width: 40%;
     float: left;
     @include font-size(12);
     display: inline-block;
     z-index: 88888;
+
+    a, a:hover, a:visited, a:active {
+      text-decoration: none;
+    }
   }
 
   .nav {
@@ -81,11 +85,16 @@ a img {
       @include font-size(10);
       @include line-height(10);
       padding-right: 10px;
+
+      a, a:hover, a:active, a:visited {
+        color: #b1b1b1;
+        text-decoration: none;
+      }
     }
 
-    li.mobile-header a {
-      color: #b1b1b1;
-    }
+    // li.mobile-header a {
+    //   color: #b1b1b1;
+    // }
   }
 }
 
@@ -93,17 +102,26 @@ a img {
   padding-top: 150px;
   padding-bottom: 50px;
   background-color: $illustration-bg;
-  // width: 100%;
+  color: $illustration-text;
+
+  a {
+    color: $illustration-text;
+  }
 
   img {
-    width: 450px;
+    width: 350px;
   }
 }
 
 #about {
-  padding: 50px;
+  padding: 100px;
   background-color: $about-bg;
   color: $about-text;
+
+  a, a:hover, a:visited, a:active {
+    color: $about-text;
+    text-decoration: none;
+  }
 }
 
 #resume {
@@ -133,10 +151,18 @@ a img {
         padding: 0px;
       }
 
+      .aux-info {
+        @include font-size(12);
+      }
+
       .info {
         padding-top: 15px;
         white-space: normal;
         @include font-size(12);
+
+        ul {
+          list-style: circle;
+        }
 
         .tech-list {
           padding-top: 10px;
@@ -174,4 +200,37 @@ a img {
       }
     }
   }
+}
+
+#footer {
+  font-family: $font-stack2;
+  width: 100%;
+  background-color: $footer-background;
+  color: $footer-text;
+  @include font-size(10);
+  @include line-height(30);
+  z-index: 1000;
+  padding-top: 30px;
+  text-align: left;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 30px;
+
+  .copyright {
+    width: 40%;
+    float: left;
+    display: inline-block;
+    z-index: 1001;
+  }
+
+  .links {
+    display: inline-block;
+    float: right;
+
+    a, a:hover, a:active, a:visited {
+      color: $footer-links;
+      text-decoration: none;
+    }
+  }
+
 }

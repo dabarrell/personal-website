@@ -149,6 +149,19 @@ gulp.task('images', function(cb) {
     runSequence('images:clean', 'images:inner', cb);
 });
 
+// Copy documents
+gulp.task('docs:inner', function(){
+    return gulp.src('src/docs/**/*')
+        .pipe(gulp.dest('build/docs/'));
+});
+gulp.task('docs:clean', function() {
+    return gulp.src('build/docs/**/*', { read: false })
+        .pipe(clean());
+});
+gulp.task('docs', function(cb) {
+    runSequence('docs:clean', 'docs:inner', cb);
+});
+
 // Configure the browserSync task
 gulp.task('browserSync', function() {
     browserSync.init({
@@ -164,7 +177,7 @@ gulp.task('default', ['minify-css', 'minify-js', 'copy', 'html', 'images']);
 // Dev task with browserSync
 gulp.task('dev', function(cb) {
     runSequence(
-        ['minify-css', 'minify-js', 'copy', 'html', 'images'],
+        ['minify-css', 'minify-js', 'copy', 'html', 'images', 'docs'],
         'browserSync',
         'watch',
         cb
@@ -176,6 +189,7 @@ gulp.task('watch', function() {
     gulp.watch('src/sass/**/*.scss', ['minify-css']);
     gulp.watch('src/js/**/*.js', ['minify-js']);
     gulp.watch('src/img/**/*', ['images']);
+    gulp.watch('src/docs/**/*', ['docs']);
     gulp.watch('src/**/*.html', ['html']);
     gulp.watch('src/templates/**/*.hbs', ['html']);
     gulp.watch('src/data.json', ['html']);

@@ -30,7 +30,6 @@
 				<ul class="mobile-nav">
   				<li class="mobile-header"><a href="#about">About</a></li>
   				<li class="mobile-header"><a href="#resume">Résumé</a></li>
-  				<li class="mobile-header"><a href="#work">Work</a></li>
         </ul>
 			</div>
 		</div>
@@ -39,24 +38,27 @@
     <div id="illustration" class="container">
       <div class="row text-center">
         <div class="col-xs-12">
-          <img src="img/bike.png">
+          Hi! I'm David, and I'm studying Software Engineering.<br /><br />
+          This page is currently under construction, so while I make it look pretty,
+          please have a look at my résumé below, or download a copy here.<br /><br />
+          <a href="docs/david-barrell-resume.pdf"><i class="fa fa-3x fa-cloud-download"></i></a>
         </div>
       </div>
     </div>
 
-    <div id="about" class="container">
+    <!-- <div id="about" class="container">
       <div class="row text-center">
         <div class="col-xs-12">
-          <img src="img/bike.png" width=200px>
-        </div>
+          <img src="img/bike.png" width=400px>
       </div>
     </div>
+  </div> -->
 
     <div id="resume" class="container">
       {{#each resumeSection}}
       <div class="resume-section">
         <div class="row text-left">
-          <div class="col-md-4 col-xs-8 col-md-offset-4 col-xs-offset-2 section-title">
+          <div class="col-md-6 col-xs-8 col-md-offset-3 col-xs-offset-2 section-title">
             <p>
               {{title}}
             </p>
@@ -66,16 +68,16 @@
         {{#each item}}
         <div class="section-content">
           <div class="row">
-            <div class="col-md-4 col-xs-2 text-right">
+            <div class="col-md-3 col-xs-2 text-right">
               <img class="logo" src="{{logoUrl}}" alt="{{subtitle}} Logo">
             </div>
-            <div class="col-md-2 col-xs-4 text-left">
+            <div class="col-md-3 col-xs-4 text-left titles">
               <p>
                 <span class="degree">{{title}}</span><br />
                 {{subtitle}}
               </p>
             </div>
-            <div class="col-md-2 col-xs-4 text-right">
+            <div class="col-md-3 col-xs-4 text-right aux-info">
               <p>
                 {{dates}}<br />
                 {{location}}
@@ -84,7 +86,7 @@
           </div>
           {{#if info}}
           <div class="row info">
-            <div class="col-md-4 col-xs-8 col-md-offset-4 col-xs-offset-2 text-left">
+            <div class="col-md-6 col-xs-8 col-md-offset-3 col-xs-offset-2 text-left">
               {{#if info.text}}
               <p>
                 {{{info.text}}}
@@ -102,13 +104,26 @@
             </div>
           </div>
           {{/if}}
-
-
-
         </div>
         {{/each}}
       </div>
       {{/each}}
+    </div>
+
+    <div id="footer">
+      <div class="row">
+        <div class="copyright">
+          © David Barrell 2016
+        </div>
+        <div class="links">
+          {{#each footerLink}}
+            <a href="{{url}}">{{link}}</a>
+            {{#unless @last}}
+              //
+            {{/unless}}
+          {{/each}}
+        </div>
+      </div>
     </div>
 
 
