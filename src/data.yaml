@@ -2,10 +2,25 @@
 resumeSection:
 - title: work experience
   item:
+  - logoUrl: img/uom-logo.jpg
+    title: Software Developer
+    subtitle: Health and Biomedical Informatics Centre
+    dates: Jul 2015 - Present
+    location: Melbourne, AUS
+    info:
+      text: |-
+        Work on both the support and development side of the University of
+        Melbourne's GRHANITE team. GRHANITE is custom-designed software focused on
+        the extraction of primary care data in an ethical and privacy-sensitive
+        manner, for the purpose of research.<br /><br />
+        Contributing to ongoing development of GRHANITE medical data extraction system. Developed
+        tools to streamline support process and enable easy monitoring. Created
+        new interfaces for clinical management systems.
+      tech: ['c#', 'ms sql', 'git', 'jira']
   - logoUrl: img/teenyco-logo.jpg
     title: Co-Founder & CTO
     subtitle: Teenyco
-    dates: Jul 2016 - Present
+    dates: Jul 2016 - Feb 2017
     location: Melbourne, AUS
     info:
       text: |-
@@ -26,7 +41,7 @@ resumeSection:
   - logoUrl: img/tbc-logo.jpg
     title: Software Developer
     subtitle: The Baby Club
-    dates: Oct 2016 - Present
+    dates: Oct 2016 - March 2017
     location: Melbourne, AUS
     info:
       text: |-
@@ -34,21 +49,6 @@ resumeSection:
         on Stripe API integration, handling single payments, as well as a
         custom lay-by implementation.
       tech: ['django', 'aws', 'docker', 'js', 'stripe', 'git', 'python']
-  - logoUrl: img/uom-logo.jpg
-    title: Technical Support Officer
-    subtitle: Health and Biomedical Informatics Centre
-    dates: Jul 2015 - Present
-    location: Melbourne, AUS
-    info:
-      text: |-
-        Work on both the support and development side of the University of
-        Melbourne's GRHANITE team. GRHANITE is custom-designed software focused on
-        the extraction of primary care data in an ethical and privacy-sensitive
-        manner, for the purpose of research.<br/><br/>
-        Provided technical support to over 800 clients. Developed tools in SQL to
-        streamline support process and enable easy monitoring. Developed data
-        extraction tool interface for clinical management systems.
-      tech: ['ms sql', 'git', 'c#', 'jira']
   - logoUrl: img/tuteme-logo.png
     title: Co-Founder & CTO
     subtitle: TuteMe
@@ -83,6 +83,55 @@ resumeSection:
         Liaised with external groups and internal event organisers regarding
         AV requirements. Handled set up and operation of AV equipment for events
         held at the College.
+- title: projects
+  item:
+  - logoUrl: img/communityaid-logo.png
+    title: CommunityAid
+    subtitle: Microsoft Imagine Cup National Finals
+    dates: April 2017
+    location: Melbourne, AUS
+    info:
+      text: |-
+        CommunityAid is a web application which helps communities to help themselves in disaster situations.
+        The application allows users to quickly understand their immediate situation, and respond to events
+        during and after an emergency. It aims to improve the safety and wellbeing of those in disaster
+        situations, facilitate community rebuilding, provide information about natural disaster scenarios,
+        and improve targeting of aid and emergency services.<br/><br/>
+
+        CommunityAid was initially developed at Codebrew 2017, and was then selected for the Australian
+        National Finals of the Microsoft Imagine Cup.<br/><br/>
+
+        A live demo can be found at <a href="https://communityaid.barrell.me">communityaid.barrell.me</a>, and
+        the code at <a href="https://github.com/dabarrell/team-spicy">github.com/dabarrell/team-spicy</a>.
+      tech: ['python','django','azure','twilio']
+  - title: Sentiment Analysis of Non-English Tweets
+    subtitle: Cluster and Cloud Computing
+    dates: April - May 2017
+    info:
+      text: |-
+        As a final submission for a subject at the University of Melbourne, a report was produced examining the sentiment,
+        and other data, of non-English tweets in Australia. These tweets were harvested and stored in CouchDB, which
+        was then used to analyse the data. The results were visualised on a simple front-end, utilising MapBox and D3.js.
+        <br/><br/>
+
+        The project also focused on a fully automated deployment to OpenStack, using Boto and Ansible.<br/><br/>
+
+        The final report can be found <a href="docs/ccc-report.pdf">here</a>, and the
+        code at <a href="https://github.com/dabarrell/ccc-project">github.com/dabarrell/ccc-project</a>.
+      tech: ['python','open stack','couchdb','gulp','ansible','twitter api','mapbox','d3.js']
+  - title: Personal Website
+    dates: December 2016
+    info:
+      text: |-
+        This website started as a simple portfolio, but has morphed into an
+        exercise in over-engineering for the sake of experimentation - a common theme in my personal
+        projects.<br/><br/>
+
+        All steps are as automated, from generation of pages with Handlebar tempates, to
+        creation of Docker images and deployment to AWS EC2 Container Service.<br/><br/>
+
+        Source code can be found at <a href="https://github.com/dabarrell/personal-website">github.com/dabarrell/personal-website</a>.
+      tech: ['bootstrap','gulp.js','docker','aws ecs','travis ci']
 - title: education
   item:
   - logoUrl: img/uom-logo.jpg
@@ -90,6 +139,10 @@ resumeSection:
     subtitle: University of Melbourne
     dates: 2016 - Present
     location: Melbourne, AUS
+    info:
+      text: |-
+        High Distinction (Honours) average, with subjects including Cluster and Cloud Computing,
+        Artificial Intelligence, Distributed Systems, and Declarative Programming.
   - logoUrl: img/uom-logo.jpg
     title: Bachelor of Science (Electrical Systems)
     subtitle: University of Melbourne
@@ -125,7 +178,7 @@ resumeSection:
         </ul>
 footerLink:
 - link: LinkedIn
-  url: https://linkedin.com/in/dabarrell
+  url: https://lnked.in/dabarrell
 - link: Github
   url: https://github.com/dabarrell
 - link: Email

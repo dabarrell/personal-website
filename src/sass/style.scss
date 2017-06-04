@@ -227,9 +227,12 @@ a img {
     display: inline-block;
     float: right;
 
-    a, a:hover, a:active, a:visited {
+    a, a:active, a:visited {
       color: $footer-links;
       text-decoration: none;
+    }
+    a:hover {
+      color: $footer-links-hover;
     }
   }
 

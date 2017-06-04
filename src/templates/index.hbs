@@ -69,18 +69,26 @@
         <div class="section-content">
           <div class="row">
             <div class="col-md-3 col-xs-2 text-right">
-              <img class="logo" src="{{logoUrl}}" alt="{{subtitle}} Logo">
+              {{#if logoUrl}}
+              <img class="logo" src="{{logoUrl}}" alt="Logo">
+              {{/if}}
             </div>
-            <div class="col-md-3 col-xs-4 text-left titles">
+            <div class="col-md-3 col-s-4 col-xs-8 text-left titles">
               <p>
-                <span class="degree">{{title}}</span><br />
+                <span class="degree">{{title}}</span>
+                {{#if subtitle}}
+                <br />
                 {{subtitle}}
+                {{/if}}
               </p>
             </div>
-            <div class="col-md-3 col-xs-4 text-right aux-info">
+            <div class="col-md-3 col-s-4 col-xs-8 col-md-offset-0 col-xs-offset-2 text-right aux-info">
               <p>
-                {{dates}}<br />
+                {{dates}}
+                {{#if location}}
+                <br />
                 {{location}}
+                {{/if}}
               </p>
             </div>
           </div>
@@ -113,7 +121,7 @@
     <div id="footer">
       <div class="row">
         <div class="copyright">
-          © David Barrell 2016
+          © David Barrell 2017
         </div>
         <div class="links">
           {{#each footerLink}}

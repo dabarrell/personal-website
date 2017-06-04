@@ -9,4 +9,4 @@ before_script:
 script: gulp
 after_success:
   - bin/docker_push.sh
-  - bin/ecs_deploy.sh
+  # - bin/ecs_deploy.sh
