@@ -192,10 +192,6 @@ gulp.task('deploy', function() {
     root: 'build'
   };
 
-  // if (argv.dev) {
-  //   rsyncConf.hostname = 'davidbarrell.me';
-  //   rsyncConf.destination = '/home/ubuntu/davidbarrell.me/html/ccc/';
-  //  } else
   if (argv.prod) {
     rsyncConf.hostname = 'davidbarrell.me';
     rsyncConf.destination = '/home/ubuntu/davidbarrell.me/html/';
