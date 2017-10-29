@@ -71,25 +71,34 @@ a img {
 
   .nav {
     display: inline-block;
-    float: right;
-  }
-
-  .mobile-nav {
-    display: inline-block;
     -webkit-padding-start: 5px;
     -webkit-margin-before: 0;
     float: right;
 
-    li.mobile-header {
+    ul {
+      margin-bottom: 10px;
+    }
+
+    li.nav-header {
       display: inline-block;
       @include font-size(10);
       @include line-height(10);
       padding-right: 10px;
+      text-decoration: none;
+      background-color: transparent;
 
-      a, a:hover, a:active, a:visited {
+      a, a:visited {
         color: #b1b1b1;
         text-decoration: none;
+        background-color: transparent;
       }
+
+      a:hover, a:active, .active {
+        color: #616576;
+        text-decoration: none;
+        background-color: transparent;
+      }
+
     }
 
     // li.mobile-header a {

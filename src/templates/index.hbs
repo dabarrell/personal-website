@@ -26,16 +26,18 @@
     <!-- Header -->
 		<div id="header">
 			<div class="inner name"><a href="#illustration">David Barrell</a></div>
-			<div class="nav">
-				<ul class="mobile-nav">
-  				<li class="mobile-header"><a href="#about">About</a></li>
-  				<li class="mobile-header"><a href="#resume">Résumé</a></li>
+			<div id="navigation" class="nav">
+				<ul class="nav">
+  				<li class="nav-header"><a href="#illustration">About</a></li>
+          {{#each resumeSection}}
+  				<li class="nav-header"><a href="#{{id}}">{{title}}</a></li>
+          {{/each}}
         </ul>
 			</div>
 		</div>
 
 
-    <div id="illustration" class="container">
+    <div id="illustration" class="container section">
       <div class="row text-center">
         <div class="col-xs-12">
           Hi! I'm David, and I'm studying Software Engineering.<br /><br />
@@ -56,7 +58,7 @@
 
     <div id="resume" class="container">
       {{#each resumeSection}}
-      <div class="resume-section">
+      <div id="{{id}}" class="resume-section section">
         <div class="row text-left">
           <div class="col-md-6 col-xs-8 col-md-offset-3 col-xs-offset-2 section-title">
             <p>

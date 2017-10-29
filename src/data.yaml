@@ -1,6 +1,7 @@
 ---
 resumeSection:
 - title: work experience
+  id: work-experience
   item:
   - logoUrl: img/uom-logo.jpg
     title: Software Developer
@@ -84,6 +85,7 @@ resumeSection:
         AV requirements. Handled set up and operation of AV equipment for events
         held at the College.
 - title: projects
+  id: projects
   item:
   - logoUrl: img/communityaid-logo.png
     title: CommunityAid
@@ -133,6 +135,7 @@ resumeSection:
         Source code can be found at <a href="https://github.com/dabarrell/personal-website">github.com/dabarrell/personal-website</a>.
       tech: ['bootstrap','gulp.js','docker','aws ecs','travis ci']
 - title: education
+  id: education
   item:
   - logoUrl: img/uom-logo.jpg
     title: Master of Engineering (Software)
