@@ -95,6 +95,9 @@ gulp.task('copy', function() {
     gulp.src(['node_modules/jquery/dist/**/*'])
         .pipe(gulp.dest('build/vendor/jquery'))
 
+    gulp.src(['node_modules/slick-carousel/slick/**/*'])
+        .pipe(gulp.dest('build/vendor/slick'))
+
     gulp.src([
             'node_modules/font-awesome/**',
             '!node_modules/font-awesome/.npmignore',
@@ -211,7 +214,7 @@ gulp.task('deploy', function() {
 });
 
 // Run everything
-gulp.task('default', ['minify-css', 'minify-js', 'copy', 'html', 'images']);
+gulp.task('default', ['minify-css', 'minify-js', 'copy', 'html', 'images', 'docs']);
 
 // Dev task with browserSync
 gulp.task('dev', function(cb) {

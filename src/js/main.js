@@ -87,5 +87,56 @@ function highlightNavigation() {
     });
 }
 
-$(window).scroll( throttle(highlightNavigation,100) );
-$(function() { highlightNavigation(); });
+$(window).scroll(
+  throttle(highlightNavigation,100)
+);
+
+$(function() {
+  highlightNavigation();
+});
+
+$(document).ready(function(){
+  $('.slick-carousel').each(function() {
+    console.log($(this).children().length);
+  });
+
+  $('.slick-carousel').slick({
+    dots: $(this).children().length > 3,
+    // dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    centerMode: true,
+    variableWidth: false,
+    responsive: [
+      // {
+      //   breakpoint: 1024,
+      //   settings: {
+      //     slidesToShow: 3,
+      //     slidesToScroll: 3,
+      //     infinite: true,
+      //     dots: true
+      //   }
+      // },
+      {
+        breakpoint: 1350,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: $(this).children().length > 2
+        }
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: $(this).children().length > 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+});

@@ -1,4 +1,20 @@
 ---
+about:
+  title: about
+  text: |-
+    I am passionate about fnding novel solutions to new problems, particularly in
+    the sphere of computer science and software engineering. I enjoy experimenting
+    with the constant stream of new tools, and am always looking to expand my skill
+    base.<br /><br />
+
+    The pursuit of varied projects and opportunities has allowed me to build
+    experience in a range of felds, from cluster computing and cloud deployments to
+    web and mobile application design and development; each new project is a chance
+    for me to try out new technologies, languages and tools. I am particularly
+    interested in machine learning and artifcial intelligence.<br /><br />
+
+    Outside of work, I spend my time in the theatre, behind a music stand, or on
+    the hockey feld.
 resumeSection:
 - title: work experience
   id: work-experience
@@ -10,13 +26,11 @@ resumeSection:
     location: Melbourne, AUS
     info:
       text: |-
-        Work on both the support and development side of the University of
-        Melbourne's GRHANITE team. GRHANITE is custom-designed software focused on
-        the extraction of primary care data in an ethical and privacy-sensitive
-        manner, for the purpose of research.<br /><br />
-        Contributing to ongoing development of GRHANITE medical data extraction system. Developed
-        tools to streamline support process and enable easy monitoring. Created
-        new interfaces for clinical management systems.
+        Worked on the development of GRHANITE, focused on the extraction of primary
+        care data in an ethical and privacy-sensitive manner, for the purpose of research.<br /><br />
+        Undertook major rewrite of client-side codebase, released interfaces for new
+        clinical management systems, and developed custom technical support tools.<br /><br />
+        Oversaw Git usage and created organisation’s build servers and processes.
       tech: ['c#', 'ms sql', 'git', 'jira']
   - logoUrl: img/teenyco-logo.jpg
     title: Co-Founder & CTO
@@ -104,8 +118,21 @@ resumeSection:
         National Finals of the Microsoft Imagine Cup.<br/><br/>
 
         A live demo can be found at <a href="https://communityaid.barrell.me">communityaid.barrell.me</a>, and
-        the code at <a href="https://github.com/dabarrell/team-spicy">github.com/dabarrell/team-spicy</a>.
+        the code at <a href="https://github.com/dabarrell/community-aid">github.com/dabarrell/community-aid</a>.
       tech: ['python','django','azure','twilio']
+  - logoUrl: img/ontask-logo.png
+    title: OnTask
+    subtitle: Masters Software Project
+    dates: July - October 2017
+    location: Melbourne, AUS
+    info:
+      text: |-
+        Lead Developer for team of five, creating a gamified job sharing app for Capgemini. Allows users
+        to post tasks, apply and bid for tasks, and rate each other on task completion.<br /><br />
+
+        This project was completed as a Masters Software Project at The University of Melbourne.
+      tech: ['python','django','ionic framework','angularjs']
+      images: ['img/ontask/1.png','img/ontask/2.png', 'img/ontask/3.png']
   - title: Sentiment Analysis of Non-English Tweets
     subtitle: Cluster and Cloud Computing
     dates: April - May 2017
@@ -144,7 +171,7 @@ resumeSection:
     location: Melbourne, AUS
     info:
       text: |-
-        High Distinction (Honours) average, with subjects including Cluster and Cloud Computing,
+        High Distinction (First Class Honours) average, with subjects including Cluster and Cloud Computing,
         Artificial Intelligence, Distributed Systems, and Declarative Programming.
   - logoUrl: img/uom-logo.jpg
     title: Bachelor of Science (Electrical Systems)
@@ -158,27 +185,46 @@ resumeSection:
     location: Melbourne, AUS
     info:
       text: |-
-        Majoring in bassoon, with experience on piano, alto saxophone, clarinet,
-        and guitar, and in voice.
+        Majoring in bassoon, with experience on piano, saxophones, clarinet,
+        oboe and guitar, and in voice.
         <ul>
         <li>Principal Bassoon, University of Melbourne Orchestra</li>
         <li>Choral Director, Ormond College Choir</li>
         <li>Musical Director, Ormond College Drama Club</li>
         </ul>
+- title: leadership
+  id: leadership
+  item:
   - logoUrl: img/oc-logo.jpg
-    title: Ormond College
-    subtitle: Resident
-    dates: 2012 - Present
+    title: Chair
+    subtitle: Ormond College
+    dates: 2017
     location: Melbourne, AUS
     info:
       text: |-
-        Various leadership roles and awards, including
-        <ul>
-        <li>Chair, Ormond College Middle Common Room</li>
-        <li>Producer, Ormond College Ball</li>
-        <li>Head of Music, Head of IT, Head of Lighting and Sound</li>
-        <li>Katie Lush Award for outstanding contribution</li>
-        </ul>
+        Elected executive of the graduate student body at Ormond College. Along with a team
+        of 5, I represented the interests and welfare of 100 postgraduate students, and was
+        responsible for managing a $50,000 budget, contributing to college-wide operations,
+        and advising on decisions and strategy affecting community and long-term culture.
+  # - title: Mentor
+  #   subtitle: SuperHack
+  #   dates: 2017
+  #   location: Melbourne, AUS
+  #   info:
+  #     text: |-
+  #       As a mentor
+  - title: Musical Director / Technical Director
+    subtitle: Various theatre companies
+    dates: 2012 - 2017
+    location: Melbourne, AUS
+    info:
+      text: |-
+        In these positions, I have worked with the cast and crew of over a dozen productions,
+        developing my leadership and interpersonal skills, as well as my ability to navigate
+        complex issues in a team. The diverse interests and individuals involved in artistic
+        teams often create difficult scenarios, which require careful leadership and creative
+        solutions. I have found the skills these experiences have given me complement my
+        technical leadership well.
 footerLink:
 - link: LinkedIn
   url: https://linkedin.com/in/dabarrell
