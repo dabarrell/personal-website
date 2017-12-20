@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css"/>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,7 +31,7 @@
 			<div class="inner name"><a href="#illustration">David Barrell</a></div>
 			<div id="navigation" class="nav">
 				<ul class="nav">
-  				<li class="nav-header"><a href="#illustration">About</a></li>
+  				<li class="nav-header"><a href="#about">About</a></li>
           {{#each resumeSection}}
   				<li class="nav-header"><a href="#{{id}}">{{title}}</a></li>
           {{/each}}
@@ -48,13 +51,22 @@
       </div>
     </div>
 
-    <!-- <div id="about" class="container">
-      <div class="row text-center">
-        <div class="col-xs-12">
-          <img src="img/bike.png" width=400px>
+    <div id="about" class="container">
+      <div class="row text-left">
+        <div class="col-md-6 col-xs-8 col-md-offset-3 col-xs-offset-2 about-title">
+          <p>
+            {{about.title}}
+          </p>
+        </div>
+      </div>
+      <div class="row info">
+        <div class="col-md-6 col-xs-8 col-md-offset-3 col-xs-offset-2 text-justify">
+          <p>
+            {{{about.text}}}
+          </p>
+        </div>
       </div>
     </div>
-  </div> -->
 
     <div id="resume" class="container">
       {{#each resumeSection}}
@@ -96,7 +108,16 @@
           </div>
           {{#if info}}
           <div class="row info">
-            <div class="col-md-6 col-xs-8 col-md-offset-3 col-xs-offset-2 text-left">
+            <div class="col-md-6 col-xs-8 col-md-offset-3 col-xs-offset-2 text-justify">
+              {{#if info.images}}
+              <div class="slick-carousel">
+                {{#each info.images}}
+                <div>
+                  <img src="{{this}}">
+                </div>
+                {{/each}}
+              </div>
+              {{/if}}
               {{#if info.text}}
               <p>
                 {{{info.text}}}
@@ -140,5 +161,6 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/main.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
   </body>
 </html>

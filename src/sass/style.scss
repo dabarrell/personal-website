@@ -123,13 +123,31 @@ a img {
 }
 
 #about {
-  padding: 100px;
+  padding-bottom: 100px;
+  padding-top: 100px;
   background-color: $about-bg;
   color: $about-text;
 
   a, a:hover, a:visited, a:active {
     color: $about-text;
     text-decoration: none;
+  }
+
+  .about-title {
+    @include font-size(20);
+    border-bottom: thin solid $about-text;
+    padding: 0px;
+    padding-bottom: 10px;
+  }
+
+  div {
+    padding: 0px;
+  }
+
+  .info {
+    padding-top: 15px;
+    white-space: normal;
+    @include font-size(12);
   }
 }
 
@@ -171,6 +189,22 @@ a img {
 
         ul {
           list-style: circle;
+        }
+
+        .slick-carousel {
+          text-align: center;
+          margin-top: 10px;
+          margin-bottom: 40px;
+
+          img {
+            margin: auto;
+            height: 300px;
+            border: 10px;
+          }
+
+          .slick-arrow::before {
+            color: $resume-info-text;
+          }
         }
 
         .tech-list {
