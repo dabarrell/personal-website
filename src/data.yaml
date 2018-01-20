@@ -32,6 +32,16 @@ resumeSection:
         clinical management systems, and developed custom technical support tools.<br /><br />
         Oversaw Git usage and created organisation’s build servers and processes.
       tech: ['c#', 'ms sql', 'git', 'jira']
+  - logoUrl: img/capgemini-logo.png
+    title: Senior Consultant (Contractor)
+    subtitle: Capgemini
+    dates: Jan 2018
+    location: Melbourne, AUS
+    info:
+      text: |-
+        Contracted on a temporary basis to provide advice and assistance in effectively
+        deploying a Python application to Heroku and AWS.
+      tech: ['heroku', 'aws']
   - logoUrl: img/teenyco-logo.jpg
     title: Co-Founder & CTO
     subtitle: Teenyco
