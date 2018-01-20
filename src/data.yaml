@@ -39,8 +39,8 @@ resumeSection:
     location: Melbourne, AUS
     info:
       text: |-
-        Contracted on a temporary basis to provide advice and assistance in effectively
-        deploying a Python application to Heroku and AWS.
+        Contracted to provide advice and assistance in effectively deploying a
+        Python application to Heroku and AWS.
       tech: ['heroku', 'aws']
   - logoUrl: img/teenyco-logo.jpg
     title: Co-Founder & CTO
