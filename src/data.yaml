@@ -216,13 +216,15 @@ resumeSection:
         of 5, I represented the interests and welfare of 100 postgraduate students, and was
         responsible for managing a $50,000 budget, contributing to college-wide operations,
         and advising on decisions and strategy affecting community and long-term culture.
-  # - title: Mentor
-  #   subtitle: SuperHack
-  #   dates: 2017
-  #   location: Melbourne, AUS
-  #   info:
-  #     text: |-
-  #       As a mentor
+  - title: Mentor
+    subtitle: SuperHack
+    dates: 2017
+    location: Melbourne, AUS
+    info:
+      text: |-
+        Mentored a team of high school students in a hackathon aimed at providing young girls
+        with exposure to engineering careers. Created an IoT pill dispenser designed to improve
+        adherence to drug regimens, placing second in the competition.
   - title: Musical Director / Technical Director
     subtitle: Various theatre companies
     dates: 2012 - 2017
