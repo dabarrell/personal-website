@@ -19,6 +19,13 @@ resumeSection:
 - title: work experience
   id: work-experience
   item:
+  - logoUrl: img/ca-logo.png
+    title: Machine Learning Engineer
+    subtitle: Culture Amp
+    dates: Jun 2018 - Present
+    location: Melbourne, AUS
+    info:
+      tech: ['python', 'elixir', 'event sourcing', 'scikit-learn', 'microservices']
   - logoUrl: img/uom-logo.jpg
     title: Software Developer
     subtitle: Health and Biomedical Informatics Centre
