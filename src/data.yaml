@@ -29,7 +29,7 @@ resumeSection:
   - logoUrl: img/uom-logo.jpg
     title: Software Developer
     subtitle: Health and Biomedical Informatics Centre
-    dates: Jul 2015 - Present
+    dates: Jul 2015 - Jun 2018
     location: Melbourne, AUS
     info:
       text: |-
@@ -38,7 +38,7 @@ resumeSection:
         Undertook major rewrite of client-side codebase, released interfaces for new
         clinical management systems, and developed custom technical support tools.<br /><br />
         Oversaw Git usage and created organisation’s build servers and processes.
-      tech: ['c#', 'ms sql', 'git', 'jira']
+      tech: ['c#', 'python', 'ms sql', 'git', 'jira']
   - logoUrl: img/capgemini-logo.png
     title: Senior Consultant (Contractor)
     subtitle: Capgemini
