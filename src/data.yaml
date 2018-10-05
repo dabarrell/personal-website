@@ -25,6 +25,13 @@ resumeSection:
     dates: Jun 2018 - Present
     location: Melbourne, AUS
     info:
+      text: |-
+        Working on the Collective Intelligence team to draw insights out of the results
+        of our customer’s surveys, to help those customers collect, share and act on
+        employee feedback.<br /><br />
+        Responsible for deploying theoretical algorithms and frameworks developed by Data
+        Scientists into production-quality and operational code, and for designing and
+        delivering machine learning components of our product.
       tech: ['python', 'elixir', 'event sourcing', 'scikit-learn', 'microservices']
   - logoUrl: img/uom-logo.jpg
     title: Software Developer
