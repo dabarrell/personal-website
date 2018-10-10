@@ -2,19 +2,19 @@
 about:
   title: about
   text: |-
-    I am passionate about fnding novel solutions to new problems, particularly in
+    I am passionate about finding novel solutions to new problems, particularly in
     the sphere of computer science and software engineering. I enjoy experimenting
     with the constant stream of new tools, and am always looking to expand my skill
     base.<br /><br />
 
     The pursuit of varied projects and opportunities has allowed me to build
-    experience in a range of felds, from cluster computing and cloud deployments to
+    experience in a range of fields, from cluster computing and cloud deployments to
     web and mobile application design and development; each new project is a chance
     for me to try out new technologies, languages and tools. I am particularly
-    interested in machine learning and artifcial intelligence.<br /><br />
+    interested in machine learning and artificial intelligence.<br /><br />
 
     Outside of work, I spend my time in the theatre, behind a music stand, or on
-    the hockey feld.
+    the hockey field.
 resumeSection:
 - title: work experience
   id: work-experience
@@ -258,3 +258,189 @@ footerLink:
   url: https://github.com/dabarrell
 - link: Email
   url: mailto:david@barrell.me
+creative:
+  about: 
+    title: creative resume
+    text: |-
+      Outside of work hours, I spend much of my time playing music and in the theatre. Listed
+      below is a selection of my creative and theatrical experience.<br /><br />
+      Under construction.
+  section:
+    - title: accreditation
+      id: accreditation
+      items:
+        - title: MD Professional Development Workshop
+          year: 2017
+          organisation: ABODA
+        - title: Diploma in Music (Practical)
+          year: 2012-14
+          organisation: The University of Melbourne
+        - title: A.Mus.A. (Bassoon)
+          year: 2011
+          organisation: AMEB
+    - title: musical direction
+      id: musical-direction
+      items:
+        - title: Music Supervisor/Conductor
+          year: 2018
+          show: The Sitzprobe
+          organisation: UMMTA
+        - title: Musical Director
+          year: 2018
+          show: The Drowsy Chaperone
+          organisation: UMMTA
+        - title: Assistant Musical Director
+          year: 2017
+          show: Heathers
+          organisation: UMMTA
+        - title: Conductor/Orchestrator
+          year: 2017
+          show: The Sitzprobe
+          organisation: UMMTA
+        - title: Musical Director
+          year: 2014
+          show: Little Show of Horrors
+          organisation: ICAC
+        - title: Musical Director
+          year: 2014
+          show: Sunset Boulevard
+          organisation: Ormond College
+        - title: Musical Director
+          year: 2012
+          show: Spring Awakening
+          organisation: Ormond College
+        - title: Conductor
+          year: 2011
+          organisation: Scotch College Orchestra
+    - title: choral
+      id: choral
+      items:
+        - title: Choral Director
+          year: 2014-15
+          organisation: Ormond Choir
+        - title: Vocalist
+          year: 2012-14
+          organisation: Concordis Chamber Choir
+        - title: Vocalist
+          year: 2011
+          organisation: The Cardinals
+        - title: Vocalist
+          year: 2008-11
+          organisation: Scotch College Chamber Choir
+    - title: instrumental
+      id: instrumental
+      items:
+        - title: Reed (Bassoon)
+          year: 2018
+          show: Into the Woods
+          organisation: ICAC
+        - title: Reed (Oboe, Clarinet, Alto Sax, Bari Sax)
+          year: 2018
+          show: Heathers
+          organisation: UMMTA
+        - title: Reed (Bassoon, Clarinet, Alto Sax)
+          year: 2018
+          show: Assassins
+          organisation: Ormond College
+        - title: Reed (Bassoon, Clarinet, Alto Sax)
+          year: 2018
+          show: Company
+          organisation: ICAC
+        - title: Alto Sax
+          year: 2013-17
+          organisation: Ormond Big Band
+        - title: (Principal) Bassoon
+          year: 2012-14
+          organisation: The University of Melbourne Orchestra
+        - title: Reed (Bassoon)
+          year: 2012
+          show: Anything Goes
+          organisation: ICAC
+        - title: Bassoon
+          year: 2011
+          organisation: Pro Musica Chamber Orchestra
+        - title: Reed (Bassoon)
+          year: 2010
+          show: Sound of Music
+          organisation: Scotch College
+        - title: Bassoon
+          year: 2010
+          organisation: Australian Ballet Conservatoire Orchestra
+        - title: Reed (Bassoon)
+          year: 2009
+          show: West Side Story
+          organisation: Scotch College
+        - title: Reed (Bassoon)
+          year: 2008
+          show: Into the Woods
+          organisation: Scotch College
+    - title: technical
+      id: technical
+      items:
+        - title: Technical Director
+          year: 2018
+          show: The Witches of Eastwick
+          organisation: UMMTA
+        - title: Theatre Technician
+          year: 2018-Present
+          organisation: Union House Theatre
+        - title: Set Construction Manager
+          year: 2017
+          show: Heathers
+          organisation: UMMTA
+        - title: Sound Designer
+          year: 2017
+          show: The Coven
+          organisation: Ringtail Theatre
+        - title: Technical Director
+          year: 2017
+          show: 10 Out Of 12
+          organisation: Ormond College
+        - title: Technical Director
+          year: 2016
+          show: Assassins
+          organisation: Ormond College
+        - title: Set Construction
+          year: 2015
+          show: Joseph K
+          organisation: Ormond College
+        - title: AV Coordinator
+          year: 2014-15
+          organisation: Ormond College
+        - title: Technical Director
+          year: 2013
+          show: The Rocky Horror Picture Show
+          organisation: Ormond College
+        - title: Head of Lighting and Sound
+          year: 2013
+          organisation: Ormond College
+        - title: Stage Manager
+          year: 2013
+          show: Metamorphoses
+          organisation: Ormond College
+        - title: Technical Director
+          year: 2012
+          show: After Liverpool
+          organisation: Ormond College
+    - title: other
+      id: other
+      items:
+        - title: Producer
+          year: 2015
+          organisation: Ormond Ball
+        - title: Director
+          year: 2015
+          show: Ormond Shorts
+          organisation: Ormond College
+        - title: Producer
+          year: 2014
+          show: Ormond Shorts
+          organisation: Ormond College
+        - title: Director
+          year: 2014
+          show: Ormond Shorts
+          organisation: Ormond College
+        - title: Cast (Grand Mikado)
+          year: 2011
+          show: The Mikado
+          organisation: Scotch College

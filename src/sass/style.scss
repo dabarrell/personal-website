@@ -245,6 +245,83 @@ a img {
   }
 }
 
+#creative-about {
+  padding-bottom: 100px;
+  padding-top: 192px;
+  background-color: $about-bg;
+  color: $about-text;
+
+  a, a:hover, a:visited, a:active {
+    color: $about-text;
+    text-decoration: none;
+  }
+
+  .about-title {
+    @include font-size(20);
+    border-bottom: thin solid $about-text;
+    padding: 0px;
+    padding-bottom: 10px;
+  }
+
+  div {
+    padding: 0px;
+  }
+
+  .info {
+    padding-top: 15px;
+    white-space: normal;
+    @include font-size(12);
+  }
+}
+
+#creative {
+  padding-bottom: 150px;
+  background-color: $resume-bg;
+  color: $resume-text;
+
+  .resume-section {
+    padding-top: 150px;
+
+    .section-title {
+      @include font-size(20);
+      border-bottom: thin solid $resume-text;
+      padding: 0px;
+      padding-bottom: 10px;
+    }
+
+    .section-content {
+      padding-top: 10px;
+      // padding-bottom: 30px;
+      @include line-height(20);
+      @include font-size(12);
+      color: $resume-info-text;
+      white-space: nowrap;
+
+      div {
+        padding: 0px;
+      }
+
+      .show-name {
+        font-style: italic;
+        display: inline;
+      }
+
+      .aux-info {
+        @include font-size(12);
+      }
+
+      .degree {
+        @include font-size(12);
+        color: $resume-text;
+      }
+      
+      .year {
+        padding-right: 20px;
+      }
+    }
+  }
+}
+
 #footer {
   font-family: $font-stack2;
   width: 100%;
