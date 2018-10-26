@@ -266,9 +266,13 @@ creative:
       below is a selection of my creative and theatrical experience.<br /><br />
       Under construction.
   section:
-    - title: accreditation
+    - title: accreditation and awards
       id: accreditation
       items:
+        - title: Most Outstanding Musical Director/Band (UHT Awards)
+          show: The Drowsy Chaperone
+          year: 2018
+          organisation: UMMTA
         - title: MD Professional Development Workshop
           year: 2017
           organisation: ABODA
@@ -377,6 +381,10 @@ creative:
     - title: technical
       id: technical
       items:
+        - title: Assistant Stage Manager
+          year: 2018
+          show: Les Misérables
+          organisation: OSMaD
         - title: Technical Director
           year: 2018
           show: The Witches of Eastwick
