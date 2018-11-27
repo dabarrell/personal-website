@@ -285,6 +285,10 @@ creative:
     - title: musical direction
       id: musical-direction
       items:
+        - title: Musical Director
+          year: 2019
+          show: Spring Awakening
+          organisation: RMIT
         - title: Music Supervisor/Conductor
           year: 2018
           show: The Sitzprobe
