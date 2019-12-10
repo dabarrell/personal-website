@@ -8,10 +8,10 @@ about:
     base.<br /><br />
 
     The pursuit of varied projects and opportunities has allowed me to build
-    experience in a range of fields, from cluster computing and cloud deployments to
-    web and mobile application design and development; each new project is a chance
-    for me to try out new technologies, languages and tools. I am particularly
-    interested in machine learning and artificial intelligence.<br /><br />
+    experience in a range of fields, from cluster computing and infrastructure
+    engineering to web and mobile application design and development; each new project
+    is a chance for me to try out new technologies, languages and tools. I am particularly
+    interested in machine learning and sofware reliability engineering.<br /><br />
 
     Outside of work, I spend my time in the theatre, behind a music stand, or on
     the hockey field.
@@ -20,19 +20,24 @@ resumeSection:
   id: work-experience
   item:
   - logoUrl: img/ca-logo.png
-    title: Machine Learning Engineer
+    title: Team Lead/Machine Learning Engineer
     subtitle: Culture Amp
     dates: Jun 2018 - Present
     location: Melbourne, AUS
     info:
       text: |-
-        Working on the Collective Intelligence team to draw insights out of the results
-        of our customer’s surveys, to help those customers collect, share and act on
-        employee feedback.<br /><br />
-        Responsible for deploying theoretical algorithms and frameworks developed by Data
-        Scientists into production-quality and operational code, and for designing and
-        delivering machine learning components of our product.
-      tech: ['python', 'elixir', 'event sourcing', 'scikit-learn', 'microservices']
+        I started off working on the Collective Intelligence team to draw out insights
+        from the results of our customer's surveys, to help those customers collect,
+        share and act on employee feedback. This included a responsibility for deploying
+        theoretical algorithms and frameworks developed by Data Scientists into
+        production-quality and operational code, and for designing and delivering
+        machine learning components of our product.<br /><br />
+        As of early 2019, I have been Team Lead of the Comments team, responsible for all
+        analytics and reporting related to comments left in the Culture Amp platform. As
+        part of the team, I've contributed to the development of numerous new features,
+        including comment clustering and automatic comment translation, alongside managing
+        the team's infrastructure.
+      tech: ['python', 'elixir', 'kotlin', 'aws', 'cdk', 'event sourcing', 'microservices']
   - logoUrl: img/uom-logo.jpg
     title: Software Developer
     subtitle: Health and Biomedical Informatics Centre
@@ -385,6 +390,10 @@ creative:
     - title: technical
       id: technical
       items:
+        - title: Stage Manager
+          year: 2019
+          show: Miss Saigon
+          organisation: OSMaD
         - title: Assistant Stage Manager
           year: 2018
           show: Les Misérables
@@ -437,6 +446,9 @@ creative:
     - title: other
       id: other
       items:
+        - title: Secretary
+          year: 2019
+          organisation: OSMaD
         - title: Producer
           year: 2015
           organisation: Ormond Ball
