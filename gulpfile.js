@@ -17,7 +17,6 @@ var handlebars = require('gulp-compile-handlebars');
 var fs = require('fs');
 var yaml = require('yaml-js');
 var exec = require('child_process').exec;
-var gutil = require('gulp-util');
 var argv  = require('minimist')(process.argv);
 var rsync = require('gulp-rsync');
 var prompt = require('gulp-prompt');
@@ -60,9 +59,7 @@ gulp.task('minify-css:clean', function() {
     return gulp.src('build/css/**/*.css', { read: false })
         .pipe(clean());
 });
-gulp.task('minify-css', function(cb) {
-    runSequence('minify-css:clean', 'minify-css:inner', cb);
-});
+gulp.task('minify-css', gulp.series('minify-css:clean', 'minify-css:inner', function(cb) { cb(); }));
 
 // Minify JS
 gulp.task('minify-js:inner', function() {
@@ -83,12 +80,10 @@ gulp.task('minify-js:clean', function() {
     return gulp.src('build/js/**/*.js', { read: false })
         .pipe(clean());
 });
-gulp.task('minify-js', function(cb) {
-    runSequence('minify-js:clean', 'minify-js:inner', cb);
-});
+gulp.task('minify-js', gulp.series('minify-js:clean', 'minify-js:inner', function(cb) { cb(); }));
 
 // Copy vendor libraries from /node_modules into /build/vendor
-gulp.task('copy', function() {
+gulp.task('copy', function(cb) {
     gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*'])
         .pipe(gulp.dest('build/vendor/bootstrap'))
 
@@ -106,6 +101,8 @@ gulp.task('copy', function() {
             '!node_modules/font-awesome/*.json'
         ])
         .pipe(gulp.dest('build/vendor/font-awesome'))
+    
+    cb()
 });
 
 // Copy .html files from /src to /build
@@ -120,10 +117,6 @@ gulp.task('html:clean', function() {
     return gulp.src('build/**/*.html', { read: false })
         .pipe(clean());
 });
-gulp.task('html', function(cb) {
-    runSequence('html:clean', 'handlebars', 'html:inner', cb);
-});
-
 gulp.task('handlebars', function() {
     var options = {
             ignorePartials: true
@@ -139,6 +132,7 @@ gulp.task('handlebars', function() {
             stream: true
         }));
 });
+gulp.task('html', gulp.series('html:clean', 'handlebars', 'html:inner', function(cb) { cb(); }));
 
 // Copy and optimise images
 gulp.task('images:inner', function(){
@@ -153,9 +147,7 @@ gulp.task('images:clean', function() {
     return gulp.src('build/img/**/*', { read: false })
         .pipe(clean());
 });
-gulp.task('images', function(cb) {
-    runSequence('images:clean', 'images:inner', cb);
-});
+gulp.task('images', gulp.series('images:clean', 'images:inner', function(cb) { cb(); }));
 
 // Copy documents
 gulp.task('docs:inner', function(){
@@ -166,9 +158,7 @@ gulp.task('docs:clean', function() {
     return gulp.src('build/docs/**/*', { read: false })
         .pipe(clean());
 });
-gulp.task('docs', function(cb) {
-    runSequence('docs:clean', 'docs:inner', cb);
-});
+gulp.task('docs', gulp.series('docs:clean', 'docs:inner', function(cb) { cb(); }));
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
@@ -179,68 +169,25 @@ gulp.task('browserSync', function() {
     })
 });
 
-// Deploy
-gulp.task('deploy', function() {
-
-  rsyncPaths = ['build/**/*'];
-
-  rsyncConf = {
-    progress: true,
-    incremental: true,
-    relative: true,
-    emptyDirectories: true,
-    recursive: true,
-    clean: true,
-    exclude: [],
-    root: 'build'
-  };
-
-  if (argv.prod) {
-    rsyncConf.hostname = 'davidbarrell.me';
-    rsyncConf.destination = '/home/ubuntu/davidbarrell.me/html/';
-  } else {
-    throwError('deploy', gutil.colors.red('Missing or invalid target'));
-  }
-
-  return gulp.src(rsyncPaths)
-  .pipe(gulpif(
-      argv.prod,
-      prompt.confirm({
-        message: 'Heads Up! Are you SURE you want to push to PRODUCTION?',
-        default: false
-      })
-  ))
-  .pipe(rsync(rsyncConf));
-});
-
 // Run everything
-gulp.task('default', ['minify-css', 'minify-js', 'copy', 'html', 'images', 'docs']);
-
-// Dev task with browserSync
-gulp.task('dev', function(cb) {
-    runSequence(
-        ['minify-css', 'minify-js', 'copy', 'html', 'images', 'docs'],
-        'browserSync',
-        'watch',
-        cb
-    );
-});
+gulp.task('default', gulp.series('minify-css', 'minify-js', 'copy', 'html', 'images', 'docs', function(cb) { cb() }));
 
 // Set up watches
 gulp.task('watch', function() {
-    gulp.watch('src/sass/**/*.scss', ['minify-css']);
-    gulp.watch('src/js/**/*.js', ['minify-js']);
-    gulp.watch('src/img/**/*', ['images']);
-    gulp.watch('src/docs/**/*', ['docs']);
-    gulp.watch('src/**/*.html', ['html']);
-    gulp.watch('src/templates/**/*.hbs', ['html']);
-    gulp.watch('src/data.json', ['html']);
-    gulp.watch('src/data.yaml', ['html']);
+    gulp.watch('src/sass/**/*.scss', gulp.series('minify-css'));
+    gulp.watch('src/js/**/*.js', gulp.series('minify-js'));
+    gulp.watch('src/img/**/*', gulp.series('images'));
+    gulp.watch('src/docs/**/*', gulp.series('docs'));
+    gulp.watch('src/**/*.html', gulp.series('html'));
+    gulp.watch('src/templates/**/*.hbs', gulp.series('html'));
+    gulp.watch('src/data.json', gulp.series('html'));
+    gulp.watch('src/data.yaml', gulp.series('html'));
 });
 
-function throwError(taskName, msg) {
-  throw new gutil.PluginError({
-      plugin: taskName,
-      message: msg
-    });
-}
+// Dev task with browserSync
+gulp.task('dev', gulp.series(
+    gulp.parallel('minify-css', 'minify-js', 'copy', 'html', 'images', 'docs', function(cb) { cb() }),
+    'watch',
+    'browserSync',
+    function(cb) { cb() }
+))
